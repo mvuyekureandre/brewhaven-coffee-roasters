@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-midnight: #062C2C;
+    --color-surface-teal: #0D3B3A;
+    --color-cream-bg: #F6F1E8;
+    --color-gold-accent: #C8A96A;
+    --color-gold-dark: #A7864B;
+    --color-text-light: #F8F5EF;
+    --color-text-body: #D8CEC0;
+    --color-divider: rgba(200, 169, 106, 0.18);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #062C2C;
+    color: #F8F5EF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-script {
+    font-family: 'Alex Brush', cursive;
+  }
+}
+
+/* Custom subtle noise texture or gold glow effects */
+.gold-glow {
+  box-shadow: 0 0 35px -8px rgba(200, 169, 106, 0.28);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 4px 24px -2px rgba(200, 169, 106, 0.12);
+}
+
+.gold-border {
+  border: 1px solid rgba(200, 169, 106, 0.22);
+}
+
+.gold-border-light {
+  border: 1px solid rgba(200, 169, 106, 0.12);
+}
+
+.glass-teal {
+  background: rgba(13, 59, 58, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(200, 169, 106, 0.2);
+}
+
+.glass-teal-subtle {
+  background: rgba(6, 44, 44, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #062C2C;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a4d4b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A96A;
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1.0) translate(0, 0); }
+  50% { transform: scale(1.06) translate(-1%, -1%); }
+  100% { transform: scale(1.0) translate(0, 0); }
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scaleX(1); opacity: 0; }
+  30% { opacity: 0.5; }
+  70% { opacity: 0.35; }
+  100% { transform: translateY(-44px) scaleX(1.4); opacity: 0; }
+}
+
+@keyframes nitroCascade {
+  0% { transform: translateY(-30px); opacity: 0; }
+  30% { opacity: 0.7; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(50px); opacity: 0; }
+}
+
+.animate-kenburns {
+  animation: kenburns 14s ease-in-out infinite alternate;
+}
+
+.animate-steam-1 {
+  animation: steamRise 3.8s ease-out infinite;
+}
+
+.animate-steam-2 {
+  animation: steamRise 4.5s ease-out infinite 1.2s;
+}
+
+.animate-steam-3 {
+  animation: steamRise 5.2s ease-out infinite 2.2s;
+}
+
+.animate-cascade-1 {
+  animation: nitroCascade 2.4s linear infinite;
+}
+
+.animate-cascade-2 {
+  animation: nitroCascade 3s linear infinite 0.8s;
+}
+

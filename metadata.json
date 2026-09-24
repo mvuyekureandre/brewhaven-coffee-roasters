@@ -1,0 +1,6 @@
+{
+  "name": "BREWHAVEN — Ultra Premium Coffee",
+  "description": "Luxury coffee shop experience. Artisan brews, curated menu, serene atmosphere, and community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
